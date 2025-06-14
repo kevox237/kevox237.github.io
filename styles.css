@@ -1,0 +1,331 @@
+/* Variables y reset */
+:root {
+    --background: rgb(10, 10, 11);
+    --foreground: rgb(250, 250, 250);
+    --primary: rgb(124, 58, 237);
+    --secondary: rgb(36, 41, 51);
+    --accent: rgb(36, 41, 51);
+    --radius: 0.5rem;
+}
+.boton-comprar {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff5733; 
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-comprar:hover {
+    background-color: #d94323;
+    transform: scale(1.05); 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.5;
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; 
+    padding: 20px;
+    background-color: #222; 
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+video {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--secondary);
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: none;
+}
+
+.nav-link {
+    color: rgb(209, 213, 219);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--foreground);
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    color: var(--foreground);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text {
+    color: rgb(156, 163, 175);
+    font-size: 1.125rem;
+}
+
+/* Game Cards */
+.featured-games {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.game-card {
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,1), transparent);
+}
+
+.game-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.rating-stars {
+    color: rgb(250, 204, 21);
+}
+
+/* Categories */
+.categories {
+    padding: 4rem 0;
+    background-color: rgba(36, 41, 51, 0.5);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.category-btn {
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    color: var(--foreground);
+    padding: 1.5rem;
+    font-size: 1.125rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.category-btn:hover {
+    background-color: var(--secondary);
+}
+
+/* Reviews */
+.latest-reviews {
+    padding: 4rem 0;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.review-card {
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+}
+
+.review-content {
+    display: flex;
+    gap: 1rem;
+}
+
+.review-image {
+    width: 6rem;
+    height: 6rem;
+    border-radius: var(--radius);
+    object-fit: cover;
+}
+
+.review-info {
+    flex: 1;
+}
+
+.review-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.review-text {
+    color: rgb(156, 163, 175);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary);
+    padding: 3rem 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-text {
+    color: rgb(156, 163, 175);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-btn {
+    color: var(--foreground);
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 3.75rem;
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .games-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.copyright {
+    background-color: #222; 
+    color: #fff; 
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    width: 100PX
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.copyright p {
+    margin: 0;
+}
